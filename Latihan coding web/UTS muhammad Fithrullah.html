@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>UTS muhammad Fithrullah</title>
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+    <body>
+        <nav>
+            <div class="menu-mobile">
+                <a herf="#">Menu</a>
+            </div>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">PROFIL</a></li>
+                <li><a href="#">GALLERY</a></li>
+                <li><a href="#">NEWS</a></li>
+                <li><a href="#">MY INVENTORY</a></li>
+            </ul>
+        </nav>
+
+        <section id="box-profil">
+            <div class="img-profil">
+                <div class="photo" style="background-image: url(assets/gambar/fithrah.jpeg);"></div>
+            </div>
+            <div class="description">
+                <h1 id="pName">Muhammad Fithrullah </h1>
+                <p id="pRole">Matematika</p>
+                <a href="#input-form" class="button bg-green" onclick="editForm()">Edit</a>
+                <a href="#" class="button border-blue">Resume</a>
+            </div>
+        <div class="information">
+            <div>
+                <div class="data">
+                    <p class="field">Age</p>
+                    <p id="pAge" class="text-gray">20</p>
+                </div>
+                <div class="data">
+                    <p class="field">Location</p>
+                    <p id="pLocation" class="text-gray">mataram, lombok</p>
+                </div>
+                <div class="data">
+                    <p class="field">University</p>
+                    <p id="pUniversity" class="text-gray">UIN Maulana Malik Ibrahim Malang</p>
+                </div>
+                <div class="data">
+                    <p class="field">Email</p>
+                    <p id="pEmail" class="text-gray">muhammadfithrullah@gmail.com</p>
+                </div>
+            </div>
+        </div>
+
+        </section>
+
+
+        <section id=input-form>
+            <form method="#" action="#">
+                <div class="form">
+                    <label>Name</label>
+                    <input id="inpName" type="text" name="name">
+                </div>
+                <div class="form">
+                    <label>Age</label>
+                    <input id="inpAge" type="number" name="Age">
+                </div>
+                <div class="form">
+                    <label>Location</label>
+                    <input id="inpLocation" type="text" name="Location">
+                </div>
+                <div class="form">
+                    <label>Email</label>
+                    <input id="inpEmail" type="email" name="email">
+                </div>
+                <div class="form">
+                    <input onclick="simpanForm()" type="submit" name="submit"value="SUBMIT" class="bg-blue">
+                </div>
+
+            </form>
+        </section>
+        
+        <script>
+            var formMenu = document.getElementById("input-form");
+            formMenu.style.display = "none";
+        
+            function editForm(){
+                if(formMenu.style.display==="none"){
+                    formMenu.style.display="block";
+                }else{
+                    formMenu.style.display="none";
+                }
+                var name = document.getElementById("pName").innerHTML;
+                var age = document.getElementById("pAge").innerHTML;
+                var location = document.getElementById("pLocation").innerHTML;
+                var email = document.getElementById("pEmail").innerHTML;
+        
+                document.getElementById("inpName").value = name;
+                document.getElementById("inpAnge").value = age;
+                document.getElementById("inpLocation").value = location;
+                document.getElementById("inpEmail").value = email;
+            }
+        
+            function simpanForm(){
+        
+            }
+        
+            function showmenu(){
+                var menu = document.getElementById("menu");
+                var box = document.getElementById("box-profil");
+        
+                if(menu.style.display === "block"){
+                    menu.style.display = "none";
+                    box.style.paddingTop = "0px";
+                }else{
+                    menu.style.display = "block";
+                    box.style.paddingTop= "125px";
+                }
+            }
+        </script>
+
+
+        <a href="https://elearning.uin-malang.ac.id">E-Learning</a>
+
+    </body>
+</html>
